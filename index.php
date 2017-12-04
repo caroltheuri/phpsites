@@ -14,6 +14,7 @@
     <div class="grid-x grid-margin-x">
         <div class="large-1 cell"></div>
         <?php
+
         include 'animal.php';
         echo "
  <div class=\"auto cell\" >

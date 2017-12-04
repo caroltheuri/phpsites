@@ -1,7 +1,8 @@
 <?php
+//namespace animals2;
 trait movementsofAnimals{
     public function setMovement($movement){
-       return $this -> movement= $movement;
+        return $this -> movement= $movement;
     }
 }
 //creating a class
@@ -14,12 +15,22 @@ class Animals{
     }
     use movementsofAnimals;
 }
+
 //creates a child class by using parent methods and adding more of its own
 class Kangaroo extends Animals{
     public function move(){
         return "A kangaroo " . $this -> movement . " atleast thats how he moves" ."</i><br />";
     }
 }
+function customError($errno, $errstr) {
+    echo "<b>Error:</b> [$errno] $errstr";
+}
+
+//set error handler
+set_error_handler("customError");
+
+//trigger error
+echo($dog);
 // creating an instance of a kangaroo child
 $kangaroo1 = new Kangaroo();
 // first access the parent's methods
